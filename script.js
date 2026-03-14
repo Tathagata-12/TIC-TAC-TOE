@@ -6,7 +6,7 @@ let newGameBtn = document.querySelector("#ng");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-let turnO = true;   // Player O starts
+let turnO = true;   
 
 const winPattern = [
     [0,1,2],
@@ -43,7 +43,7 @@ boxes.forEach(function(box){
 });
 
 
-// Show Winner
+
 function showWinner(winner){
 
     msg.innerText = `Congratulations! Winner is ${winner}`;
@@ -54,7 +54,7 @@ function showWinner(winner){
 }
 
 
-// Disable all boxes
+
 function disableBoxes(){
 
     boxes.forEach(function(box){
@@ -64,7 +64,7 @@ function disableBoxes(){
 }
 
 
-// Enable boxes
+
 function enableBoxes(){
 
     boxes.forEach(function(box){
@@ -75,7 +75,7 @@ function enableBoxes(){
 }
 
 
-// Reset game
+
 function resetGame(){
 
     turnO = true;
@@ -87,7 +87,7 @@ function resetGame(){
 }
 
 
-// Check winner
+
 function checkWinner(){
 
     for(let pattern of winPattern){
@@ -111,6 +111,6 @@ function checkWinner(){
 }
 
 
-// Buttons
+
 newGameBtn.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
